@@ -1,6 +1,6 @@
 <RCC>
   <qresource prefix="/plugins/styleLoad">
-    <file>icon.png</file>
+    <file>images/icon.png</file>
+    <file>images/folder.png</file>
   </qresource>
-  <qresource prefix="leeg"/>
 </RCC>

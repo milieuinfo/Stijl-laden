@@ -51,6 +51,7 @@ class styleLoadDockWidget(QtGui.QDockWidget):
 
        self.refreshContent()
        self.ui.commitBtn.clicked.connect( self.commitBtnClicked )
+       self.ui.setSourceBtn.clicked.connect(self.saveSource)
        self.iface.mapCanvas().layersChanged.connect(self.refreshContent)
 
     def commitBtnClicked(self):
@@ -81,3 +82,12 @@ class styleLoadDockWidget(QtGui.QDockWidget):
     def closeEvent(self, event):
         self.closingPlugin.emit()
         event.accept()
+
+    def saveSource( self ):
+        Fdlg = QtGui.QFileDialog()
+        home = os.path.expanduser("~")
+        fName = Fdlg.getExistingDirectory( self, "Open Folder", directory=home )
+        if fName:
+            self.s.qmlDir = fName
+            self.s.saveSettings()
+            self.refreshContent()
