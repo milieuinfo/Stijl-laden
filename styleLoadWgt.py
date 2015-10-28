@@ -69,6 +69,7 @@ class styleLoadDockWidget(QtGui.QDockWidget):
 
     def refreshContent(self):
        self.s = settings()
+       self.ui.qmlFolderLbl.setText( self.s.qmlDir )
 
        self.styles = glob.glob( os.path.join( self.s.qmlDir, "*.qml" ))
        self.mapLayers = QgsMapLayerRegistry.instance().mapLayers()

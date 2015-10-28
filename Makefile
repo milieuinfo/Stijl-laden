@@ -41,7 +41,7 @@ PY_FILES = \
 
 UI_FILES = ui_styleLoadWgt.py
 
-EXTRAS = metadata.txt icon.png images
+EXTRAS = metadata.txt images
 
 RESOURCE_FILES = resources_rc.py
 
