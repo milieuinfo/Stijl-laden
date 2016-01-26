@@ -22,7 +22,6 @@
 # Edit the following to match your sources lists
 #################################################
 
-
 #Add iso code for any locales you want to support here (space separated)
 # default is no locales
 # LOCALES = af
@@ -33,7 +32,7 @@ SOURCES = \
 	__init__.py settings.py \
 	styleLoad.py styleLoadWgt.py
 
-PLUGINNAME = styleLoad
+PLUGINNAME = Stijl_Laden
 
 PY_FILES = \
 	__init__.py settings.py \
@@ -83,7 +82,7 @@ dclean:
 derase:
 	rm -Rf $(HOME)/$(QGISDIR)/python/plugins/$(PLUGINNAME)
 
-zip: deploy dclean
+zip: deploy
 	# The zip target deploys the plugin and creates a zip file with the deployed
 	# content. You can then upload the zip file on http://plugins.qgis.org
 	rm -f build/$(PLUGINNAME).zip

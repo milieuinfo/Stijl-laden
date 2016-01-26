@@ -21,7 +21,7 @@
  ***************************************************************************/
 """
 
-import os, sys, glob
+import os, glob
 from PyQt4 import QtGui, QtCore
 from qgis.core import *
 from settings import settings
@@ -78,7 +78,7 @@ class styleLoadDockWidget(QtGui.QDockWidget):
        self.ui.layerCbx.insertItems(0, [ l.name() for l in self.mapLayers.values()])
        self.ui.qmlList.clear()
        self.ui.qmlList.insertItems(0, [os.path.split(n)[1] for n in self.styles])
-       self.iface.mapCanvas().refreshAllLayers()
+       self.iface.mapCanvas().refresh()
 
     def closeEvent(self, event):
         self.closingPlugin.emit()

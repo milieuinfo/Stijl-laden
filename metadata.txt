@@ -7,10 +7,10 @@
 # This file should be included when you package your plugin.# Mandatory items:
 
 [general]
-name=Stijl Laden
+name=Stijl_Laden
 qgisMinimumVersion=2.0
 description=Laad een gepredefineerde stijl in de vorm van .qml-bestand.
-version=0.1
+version=0.2
 author=Kay Warrie
 email=kaywarrie@gmail.com
 
@@ -33,7 +33,7 @@ homepage=http://www.milieuinfo.be/
 category=Plugins
 icon=images/icon.png
 # experimental flag
-experimental=True
+experimental=False
 
 # deprecated flag (applies to the whole plugin, not just a single version)
 deprecated=False
